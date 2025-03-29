@@ -5,13 +5,13 @@
   --color-primary-100: #093046;
   --color-primary-200: #021926;
   --color-white: #ffffff;
+  --color-black: #222222;
   --color-secondary-200: #E97108;
   --color-akaroa: #DAC4AF;
   --color-secondary-100: #FCBC7C;
-  --color-mint: oklch(0.72 0.11 178);
 }
 
 
 .navBarItems {
-  @apply text-secondary-100 hover:text-secondary-200 cursor-pointer px-6 py-2 md:px-0;
+  @apply text-white cursor-pointer px-6 py-2 md:px-0;
 }

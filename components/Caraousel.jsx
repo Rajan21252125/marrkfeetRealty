@@ -28,7 +28,7 @@ const Caraousel = () => {
   };
 
   return (
-    <div className="relative w-full h-screen overflow-hidden flex items-center justify-center top-16">
+    <div className="relative w-full h-screen bg-black/60 overflow-hidden flex items-center justify-center top-10">
       <div className="relative w-full h-full">
         <AnimatePresence mode="wait">
           <motion.div
@@ -50,9 +50,13 @@ const Caraousel = () => {
         </AnimatePresence>
 
         {/* Name & Address */}
-        <div className="absolute top-4 left-4 md:top-8 md:left-8 bg-black bg-opacity-50 text-white p-2 md:p-4 rounded-lg">
-          <h3 className="text-lg md:text-2xl font-bold">{caraouselImage[index].name}</h3>
-          <p className="text-sm md:text-lg">{caraouselImage[index].address}</p>
+        <div className="absolute bottom-14 w-full md:bottom-1/2 left-0 md:left-1/2 transform md:-translate-x-1/2 text-white p-2 md:p-4 rounded-lg">
+          <h1 className="text-xl md:text-center sm:text-3xl md:text-6xl font-bold">
+            Find Your Dream Home
+          </h1>
+          <p className="text-sm sm:text-lg md:text-xl md:text-center">
+            Discover Premium Properties in Prime Locations
+          </p>
         </div>
 
         {/* Navigation Buttons */}
@@ -76,7 +80,7 @@ const Caraousel = () => {
         {caraouselImage.map((_, i) => (
           <div
             key={i}
-            className={`h-3 w-3 rounded-full transition-all ${
+            className={`h-1 md:h-3 w-1 md:w-3 rounded-full transition-all ${
               i === index ? "bg-white scale-125" : "bg-gray-400"
             }`}
           />
