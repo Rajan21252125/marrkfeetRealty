@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Navbar from "../../components/Navbar";  // ✅ Import Navbar
+import Footer from "../../components/Footer";  // ✅ Import Footer
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
-  display: "swap", // Improves font loading
+  display: "swap",
 });
 
 const geistMono = Geist_Mono({
@@ -32,7 +34,7 @@ export const metadata: Metadata = {
     url: "https://markfeetrealty.com",
     images: [
       {
-        url: "logo.png",
+        url: "/logo.png",
         width: 1200,
         height: 630,
         alt: "Markfeet Realty",
@@ -43,7 +45,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Markfeet Realty - Find Your Dream Property",
     description: "Discover the best real estate listings with Markfeet Realty.",
-    images: ["https://markfeetrealty.com/twitter-image.jpg"],
+    images: ["/twitter-image.jpg"],
   },
 };
 
@@ -56,7 +58,7 @@ export default function RootLayout({
         {/* Preload Fonts for Performance */}
         <link rel="preload" href="/fonts/Geist.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
         <link rel="preload" href="/fonts/GeistMono.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
-        
+
         {/* Structured Data (JSON-LD for SEO) */}
         <script
           type="application/ld+json"
@@ -82,7 +84,9 @@ export default function RootLayout({
         />
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        {children}
+        <Navbar />   {/* ✅ Navbar added */}
+        <main className="min-h-screen">{children}</main>
+        <Footer />   {/* ✅ Footer added */}
       </body>
     </html>
   );

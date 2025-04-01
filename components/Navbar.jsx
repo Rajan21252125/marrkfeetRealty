@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import { Menu, Search } from "lucide-react";
+import Link from "next/link";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -37,17 +38,17 @@ const Navbar = () => {
             </div>
           </li>
           <li className="navBarItems">
-            Home
+            <Link href="/">Home</Link>
           </li>
 
-          <li className="navBarItems">
-            Listings
+          <li className="navBarItems" >
+            Properties
           </li>
           <li className="navBarItems">
-            About
+            <Link href="/about">About</Link>
           </li>
           <li className="navBarItems">
-            Contact
+            <Link href="/contact">Contact</Link>
           </li>
         </ul>
       </div>

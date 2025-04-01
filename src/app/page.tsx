@@ -2,9 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import Navbar from "../../components/Navbar";
 import Caraousel from "../../components/Caraousel";
-import Footer from "../../components/Footer";
 import Image from "next/image";
 import FeaturedProperties from "../../components/FetaureProperties";
 import Testimonial from "../../components/Testimonials";
@@ -12,7 +10,6 @@ import Testimonial from "../../components/Testimonials";
 const Home = () => {
   return (
     <div>
-      <Navbar />
       <Caraousel />
 
       {/* Animated Featured Properties */}
@@ -77,7 +74,6 @@ const Home = () => {
       >
       <Testimonial />
       </motion.div>
-      <Footer />
     </div>
   );
 };

@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const PropertyCard = ({ image, title, price, location, beds, baths, sqft } : PropertyCardProps) => {
   return (
-    <div className="bg-white shadow-lg rounded-2xl overflow-hidden transition-all duration-300 hover:shadow-xl">
+    <div className="bg-white cursor-pointer shadow-lg rounded-2xl overflow-hidden transition-all duration-300 hover:shadow-xl">
       {/* Image with Hover Effect */}
       <div className="relative w-full h-56 overflow-hidden">
         <div className="w-full h-full transition-transform duration-300 transform hover:scale-105">
