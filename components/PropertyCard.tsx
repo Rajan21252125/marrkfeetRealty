@@ -1,8 +1,9 @@
 import Image from "next/image";
+import Link from "next/link";
 
-const PropertyCard = ({ image, title, price, location, beds, baths, sqft } : PropertyCardProps) => {
+const PropertyCard = ({ id, image, title, price, location, beds, baths, sqft } : PropertyCardProps) => {
   return (
-    <div className="bg-white cursor-pointer shadow-lg rounded-2xl overflow-hidden transition-all duration-300 hover:shadow-xl">
+    <Link href={`/Properties/${id}`}><div className="bg-white cursor-pointer shadow-lg rounded-2xl overflow-hidden transition-all duration-300 hover:shadow-xl">
       {/* Image with Hover Effect */}
       <div className="relative w-full h-56 overflow-hidden">
         <div className="w-full h-full transition-transform duration-300 transform hover:scale-105">
@@ -30,6 +31,7 @@ const PropertyCard = ({ image, title, price, location, beds, baths, sqft } : Pro
         </button>
       </div>
     </div>
+    </Link>
   );
 };
 
